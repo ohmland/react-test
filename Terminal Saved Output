@@ -1,0 +1,1220 @@
+Last login: Mon Oct  1 09:25:22 on ttys000
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model account expense SystemType Category Statement Bank Budget BudgetAccount
+Running via Spring preloader in process 1339
+      invoke  active_record
+      create    db/migrate/20181001023220_create_accounts.rb
+      create    app/models/account.rb
+      invoke    test_unit
+      create      test/models/account_test.rb
+      create      test/fixtures/accounts.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model expense
+Running via Spring preloader in process 1354
+      invoke  active_record
+      create    db/migrate/20181001023232_create_expenses.rb
+      create    app/models/expense.rb
+      invoke    test_unit
+      create      test/models/expense_test.rb
+      create      test/fixtures/expenses.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model SystemType
+Running via Spring preloader in process 1358
+      invoke  active_record
+      create    db/migrate/20181001023238_create_system_types.rb
+      create    app/models/system_type.rb
+      invoke    test_unit
+      create      test/models/system_type_test.rb
+      create      test/fixtures/system_types.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model Category
+Running via Spring preloader in process 1361
+      invoke  active_record
+      create    db/migrate/20181001023255_create_categories.rb
+      create    app/models/category.rb
+      invoke    test_unit
+      create      test/models/category_test.rb
+      create      test/fixtures/categories.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model Statement
+Running via Spring preloader in process 1364
+      invoke  active_record
+      create    db/migrate/20181001023303_create_statements.rb
+      create    app/models/statement.rb
+      invoke    test_unit
+      create      test/models/statement_test.rb
+      create      test/fixtures/statements.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model Bank
+Running via Spring preloader in process 1368
+      invoke  active_record
+      create    db/migrate/20181001023306_create_banks.rb
+      create    app/models/bank.rb
+      invoke    test_unit
+      create      test/models/bank_test.rb
+      create      test/fixtures/banks.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model Budget
+Running via Spring preloader in process 1372
+      invoke  active_record
+      create    db/migrate/20181001023309_create_budgets.rb
+      create    app/models/budget.rb
+      invoke    test_unit
+      create      test/models/budget_test.rb
+      create      test/fixtures/budgets.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g model BudgetAccount
+Running via Spring preloader in process 1375
+      invoke  active_record
+      create    db/migrate/20181001023313_create_budget_accounts.rb
+      create    app/models/budget_account.rb
+      invoke    test_unit
+      create      test/models/budget_account_test.rb
+      create      test/fixtures/budget_accounts.yml
+Zen-MacBook-Pro:MoneyTracker datawow$ rake db:migrate:reset
+Dropped database 'MoneyTracker_development'
+Dropped database 'MoneyTracker_test'
+Created database 'MoneyTracker_development'
+Created database 'MoneyTracker_test'
+== 20180928093344 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0510s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0044s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0024s
+== 20180928093344 DeviseCreateUsers: migrated (0.0581s) =======================
+
+== 20181001023220 CreateAccounts: migrating ===================================
+-- create_table(:accounts)
+   -> 0.0036s
+== 20181001023220 CreateAccounts: migrated (0.0037s) ==========================
+
+== 20181001023232 CreateExpenses: migrating ===================================
+-- create_table(:expenses)
+   -> 0.0028s
+== 20181001023232 CreateExpenses: migrated (0.0029s) ==========================
+
+== 20181001023238 CreateSystemTypes: migrating ================================
+-- create_table(:system_types)
+   -> 0.0021s
+== 20181001023238 CreateSystemTypes: migrated (0.0022s) =======================
+
+== 20181001023255 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0024s
+== 20181001023255 CreateCategories: migrated (0.0024s) ========================
+
+== 20181001023303 CreateStatements: migrating =================================
+-- create_table(:statements)
+   -> 0.0027s
+== 20181001023303 CreateStatements: migrated (0.0028s) ========================
+
+== 20181001023306 CreateBanks: migrating ======================================
+-- create_table(:banks)
+   -> 0.0031s
+== 20181001023306 CreateBanks: migrated (0.0032s) =============================
+
+== 20181001023309 CreateBudgets: migrating ====================================
+-- create_table(:budgets)
+   -> 0.0023s
+== 20181001023309 CreateBudgets: migrated (0.0024s) ===========================
+
+== 20181001023313 CreateBudgetAccounts: migrating =============================
+-- create_table(:budget_accounts)
+   -> 0.0037s
+== 20181001023313 CreateBudgetAccounts: migrated (0.0039s) ====================
+
+Zen-MacBook-Pro:MoneyTracker datawow$ rake db:migrate:reset
+Dropped database 'MoneyTracker_development'
+Dropped database 'MoneyTracker_test'
+Created database 'MoneyTracker_development'
+Created database 'MoneyTracker_test'
+== 20180928093344 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0865s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0053s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0023s
+== 20180928093344 DeviseCreateUsers: migrated (0.0945s) =======================
+
+== 20181001023220 CreateAccounts: migrating ===================================
+-- create_table(:accounts)
+   -> 0.0139s
+== 20181001023220 CreateAccounts: migrated (0.0140s) ==========================
+
+== 20181001023232 CreateExpenses: migrating ===================================
+-- create_table(:expenses)
+   -> 0.0043s
+== 20181001023232 CreateExpenses: migrated (0.0044s) ==========================
+
+== 20181001023238 CreateSystemTypes: migrating ================================
+-- create_table(:system_types)
+   -> 0.0027s
+== 20181001023238 CreateSystemTypes: migrated (0.0028s) =======================
+
+== 20181001023255 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0047s
+== 20181001023255 CreateCategories: migrated (0.0048s) ========================
+
+== 20181001023303 CreateStatements: migrating =================================
+-- create_table(:statements)
+   -> 0.0044s
+== 20181001023303 CreateStatements: migrated (0.0046s) ========================
+
+== 20181001023306 CreateBanks: migrating ======================================
+-- create_table(:banks)
+   -> 0.0052s
+== 20181001023306 CreateBanks: migrated (0.0053s) =============================
+
+== 20181001023309 CreateBudgets: migrating ====================================
+-- create_table(:budgets)
+   -> 0.0045s
+== 20181001023309 CreateBudgets: migrated (0.0047s) ===========================
+
+== 20181001023313 CreateBudgetAccounts: migrating =============================
+-- create_table(:budget_accounts)
+   -> 0.0023s
+== 20181001023313 CreateBudgetAccounts: migrated (0.0024s) ====================
+
+Zen-MacBook-Pro:MoneyTracker datawow$ rake db:migrate:reset
+Dropped database 'MoneyTracker_development'
+Dropped database 'MoneyTracker_test'
+Created database 'MoneyTracker_development'
+Created database 'MoneyTracker_test'
+== 20180928093344 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0262s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0030s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0024s
+== 20180928093344 DeviseCreateUsers: migrated (0.0318s) =======================
+
+== 20181001023220 CreateAccounts: migrating ===================================
+-- create_table(:accounts)
+   -> 0.0463s
+== 20181001023220 CreateAccounts: migrated (0.0464s) ==========================
+
+== 20181001023232 CreateExpenses: migrating ===================================
+-- create_table(:expenses)
+   -> 0.0033s
+== 20181001023232 CreateExpenses: migrated (0.0033s) ==========================
+
+== 20181001023238 CreateSystemTypes: migrating ================================
+-- create_table(:system_types)
+   -> 0.0052s
+== 20181001023238 CreateSystemTypes: migrated (0.0053s) =======================
+
+== 20181001023255 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0052s
+== 20181001023255 CreateCategories: migrated (0.0054s) ========================
+
+== 20181001023303 CreateStatements: migrating =================================
+-- create_table(:statements)
+   -> 0.0054s
+== 20181001023303 CreateStatements: migrated (0.0055s) ========================
+
+== 20181001023306 CreateBanks: migrating ======================================
+-- create_table(:banks)
+   -> 0.0043s
+== 20181001023306 CreateBanks: migrated (0.0044s) =============================
+
+== 20181001023309 CreateBudgets: migrating ====================================
+-- create_table(:budgets)
+   -> 0.0050s
+== 20181001023309 CreateBudgets: migrated (0.0053s) ===========================
+
+== 20181001023313 CreateBudgetAccounts: migrating =============================
+-- create_table(:budget_accounts)
+   -> 0.0069s
+== 20181001023313 CreateBudgetAccounts: migrated (0.0069s) ====================
+
+Zen-MacBook-Pro:MoneyTracker datawow$ rake db:migrate:reset
+Dropped database 'MoneyTracker_development'
+Dropped database 'MoneyTracker_test'
+Created database 'MoneyTracker_development'
+Created database 'MoneyTracker_test'
+== 20180928093344 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0279s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0051s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0025s
+== 20180928093344 DeviseCreateUsers: migrated (0.0358s) =======================
+
+== 20181001023220 CreateAccounts: migrating ===================================
+-- create_table(:accounts)
+   -> 0.0137s
+== 20181001023220 CreateAccounts: migrated (0.0138s) ==========================
+
+== 20181001023232 CreateExpenses: migrating ===================================
+-- create_table(:expenses)
+   -> 0.0073s
+== 20181001023232 CreateExpenses: migrated (0.0075s) ==========================
+
+== 20181001023238 CreateSystemTypes: migrating ================================
+-- create_table(:system_types)
+   -> 0.0501s
+== 20181001023238 CreateSystemTypes: migrated (0.0503s) =======================
+
+== 20181001023255 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0194s
+== 20181001023255 CreateCategories: migrated (0.0194s) ========================
+
+== 20181001023303 CreateStatements: migrating =================================
+-- create_table(:statements)
+   -> 0.0043s
+== 20181001023303 CreateStatements: migrated (0.0044s) ========================
+
+== 20181001023306 CreateBanks: migrating ======================================
+-- create_table(:banks)
+   -> 0.0048s
+== 20181001023306 CreateBanks: migrated (0.0049s) =============================
+
+== 20181001023309 CreateBudgets: migrating ====================================
+-- create_table(:budgets)
+   -> 0.0059s
+== 20181001023309 CreateBudgets: migrated (0.0060s) ===========================
+
+== 20181001023313 CreateBudgetAccounts: migrating =============================
+-- create_table(:budget_accounts)
+   -> 0.0138s
+== 20181001023313 CreateBudgetAccounts: migrated (0.0139s) ====================
+
+Zen-MacBook-Pro:MoneyTracker datawow$ rake db:migrate:reset
+Dropped database 'MoneyTracker_development'
+Dropped database 'MoneyTracker_test'
+Created database 'MoneyTracker_development'
+Created database 'MoneyTracker_test'
+== 20180928093344 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.1255s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0031s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0024s
+== 20180928093344 DeviseCreateUsers: migrated (0.1313s) =======================
+
+== 20181001023220 CreateAccounts: migrating ===================================
+-- create_table(:accounts)
+   -> 0.0488s
+== 20181001023220 CreateAccounts: migrated (0.0489s) ==========================
+
+== 20181001023232 CreateExpenses: migrating ===================================
+-- create_table(:expenses)
+   -> 0.0488s
+== 20181001023232 CreateExpenses: migrated (0.0489s) ==========================
+
+== 20181001023238 CreateSystemTypes: migrating ================================
+-- create_table(:system_types)
+   -> 0.0443s
+== 20181001023238 CreateSystemTypes: migrated (0.0444s) =======================
+
+== 20181001023255 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0470s
+== 20181001023255 CreateCategories: migrated (0.0471s) ========================
+
+== 20181001023303 CreateStatements: migrating =================================
+-- create_table(:statements)
+   -> 0.0064s
+== 20181001023303 CreateStatements: migrated (0.0066s) ========================
+
+== 20181001023306 CreateBanks: migrating ======================================
+-- create_table(:banks)
+   -> 0.0077s
+== 20181001023306 CreateBanks: migrated (0.0079s) =============================
+
+== 20181001023309 CreateBudgets: migrating ====================================
+-- create_table(:budgets)
+   -> 0.0051s
+== 20181001023309 CreateBudgets: migrated (0.0052s) ===========================
+
+== 20181001023313 CreateBudgetAccounts: migrating =============================
+-- create_table(:budget_accounts)
+   -> 0.0095s
+== 20181001023313 CreateBudgetAccounts: migrated (0.0097s) ====================
+
+Zen-MacBook-Pro:MoneyTracker datawow$ rake db:migrate:reset
+Dropped database 'MoneyTracker_development'
+Dropped database 'MoneyTracker_test'
+Created database 'MoneyTracker_development'
+Created database 'MoneyTracker_test'
+== 20180928093344 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0457s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0039s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0025s
+== 20180928093344 DeviseCreateUsers: migrated (0.0524s) =======================
+
+== 20181001023220 CreateAccounts: migrating ===================================
+-- create_table(:accounts)
+   -> 0.0112s
+== 20181001023220 CreateAccounts: migrated (0.0113s) ==========================
+
+== 20181001023232 CreateExpenses: migrating ===================================
+-- create_table(:expenses)
+   -> 0.0104s
+== 20181001023232 CreateExpenses: migrated (0.0105s) ==========================
+
+== 20181001023238 CreateSystemTypes: migrating ================================
+-- create_table(:system_types)
+   -> 0.0079s
+== 20181001023238 CreateSystemTypes: migrated (0.0080s) =======================
+
+== 20181001023255 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0110s
+== 20181001023255 CreateCategories: migrated (0.0111s) ========================
+
+== 20181001023303 CreateStatements: migrating =================================
+-- create_table(:statements)
+   -> 0.0317s
+== 20181001023303 CreateStatements: migrated (0.0318s) ========================
+
+== 20181001023306 CreateBanks: migrating ======================================
+-- create_table(:banks)
+   -> 0.0051s
+== 20181001023306 CreateBanks: migrated (0.0052s) =============================
+
+== 20181001023309 CreateBudgets: migrating ====================================
+-- create_table(:budgets)
+   -> 0.0043s
+== 20181001023309 CreateBudgets: migrated (0.0044s) ===========================
+
+== 20181001023313 CreateBudgetAccounts: migrating =============================
+-- create_table(:budget_accounts)
+   -> 0.0066s
+== 20181001023313 CreateBudgetAccounts: migrated (0.0067s) ====================
+
+Zen-MacBook-Pro:MoneyTracker datawow$ git checkout -b register_account
+Switched to a new branch 'register_account'
+Zen-MacBook-Pro:MoneyTracker datawow$ git branch -D register_account
+error: Cannot delete branch 'register_account' checked out at '/Users/datawow/Documents/Work/MoneyTracker'
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin register_account
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'register_account' on GitHub by visiting:
+remote:      https://github.com/zenology/MoneyTracker/pull/new/register_account
+remote: 
+To https://github.com/zenology/MoneyTracker.git
+ * [new branch]      register_account -> register_account
+Zen-MacBook-Pro:MoneyTracker datawow$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin register_account
+Everything up-to-date
+Zen-MacBook-Pro:MoneyTracker datawow$ git branch -D register_account
+Deleted branch register_account (was 543eace).
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin --delete register_account
+To https://github.com/zenology/MoneyTracker.git
+ - [deleted]         register_account
+Zen-MacBook-Pro:MoneyTracker datawow$ git checkout -b regis-account
+Switched to a new branch 'regis-account'
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin regis-account
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'regis-account' on GitHub by visiting:
+remote:      https://github.com/zenology/MoneyTracker/pull/new/regis-account
+remote: 
+To https://github.com/zenology/MoneyTracker.git
+ * [new branch]      regis-account -> regis-account
+Zen-MacBook-Pro:MoneyTracker datawow$ rails d devise:views -v confirmations mailer unlocks
+Running via Spring preloader in process 3564
+      invoke  Devise::Generators::SharedViewsGenerator
+      remove    app/views/devise/shared/_links.html.erb
+      invoke  form_for
+      remove    app/views/devise/confirmations/new.html.erb
+      remove    app/views/devise/mailer/confirmation_instructions.html.erb
+      remove    app/views/devise/mailer/email_changed.html.erb
+      remove    app/views/devise/mailer/password_change.html.erb
+      remove    app/views/devise/mailer/reset_password_instructions.html.erb
+      remove    app/views/devise/mailer/unlock_instructions.html.erb
+      remove    app/views/devise/unlocks/new.html.erb
+      invoke  erb
+      remove    app/views/devise/mailer/confirmation_instructions.html.erb
+      remove    app/views/devise/mailer/email_changed.html.erb
+      remove    app/views/devise/mailer/password_change.html.erb
+      remove    app/views/devise/mailer/reset_password_instructions.html.erb
+      remove    app/views/devise/mailer/unlock_instructions.html.erb
+Zen-MacBook-Pro:MoneyTracker datawow$ git checkout master
+D	app/views/devise/confirmations/new.html.erb
+D	app/views/devise/mailer/confirmation_instructions.html.erb
+D	app/views/devise/mailer/email_changed.html.erb
+D	app/views/devise/mailer/password_change.html.erb
+D	app/views/devise/mailer/reset_password_instructions.html.erb
+D	app/views/devise/mailer/unlock_instructions.html.erb
+D	app/views/devise/shared/_links.html.erb
+D	app/views/devise/unlocks/new.html.erb
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+Zen-MacBook-Pro:MoneyTracker datawow$ git add --all
+Zen-MacBook-Pro:MoneyTracker datawow$ git commit -m "remove unused view"
+[master b24de3e] remove unused view
+ 8 files changed, 81 deletions(-)
+ delete mode 100644 app/views/devise/confirmations/new.html.erb
+ delete mode 100644 app/views/devise/mailer/confirmation_instructions.html.erb
+ delete mode 100644 app/views/devise/mailer/email_changed.html.erb
+ delete mode 100644 app/views/devise/mailer/password_change.html.erb
+ delete mode 100644 app/views/devise/mailer/reset_password_instructions.html.erb
+ delete mode 100644 app/views/devise/mailer/unlock_instructions.html.erb
+ delete mode 100644 app/views/devise/shared/_links.html.erb
+ delete mode 100644 app/views/devise/unlocks/new.html.erb
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 467 bytes | 467.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/zenology/MoneyTracker.git
+   543eace..b24de3e  master -> master
+Zen-MacBook-Pro:MoneyTracker datawow$ git checkout regis-account
+Switched to branch 'regis-account'
+Zen-MacBook-Pro:MoneyTracker datawow$ git branch
+  master
+* regis-account
+Zen-MacBook-Pro:MoneyTracker datawow$ bundle
+Using rake 12.3.1
+Using concurrent-ruby 1.0.5
+Using i18n 1.1.0
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.1
+Using builder 3.2.3
+Using erubi 1.7.1
+Using mini_portile2 2.3.0
+Using nokogiri 1.8.4
+Using rails-dom-testing 2.0.3
+Using crass 1.0.4
+Using loofah 2.2.2
+Using rails-html-sanitizer 1.0.4
+Using actionview 5.2.1
+Using rack 2.0.5
+Using rack-test 1.1.0
+Using actionpack 5.2.1
+Using nio4r 2.3.1
+Using websocket-extensions 0.1.3
+Using websocket-driver 0.7.0
+Using actioncable 5.2.1
+Using globalid 0.4.1
+Using activejob 5.2.1
+Using mini_mime 1.0.1
+Using mail 2.7.0
+Using actionmailer 5.2.1
+Using activemodel 5.2.1
+Using arel 9.0.0
+Using activerecord 5.2.1
+Using mimemagic 0.3.2
+Using marcel 0.3.3
+Using activestorage 5.2.1
+Using public_suffix 3.0.3
+Using addressable 2.5.2
+Using io-like 0.3.0
+Using archive-zip 0.11.0
+Using execjs 2.7.0
+Using autoprefixer-rails 9.1.4
+Using awesome_print 1.8.0
+Using bcrypt 3.1.12
+Using bindex 0.5.0
+Using msgpack 1.2.4
+Using bootsnap 1.3.2
+Using popper_js 1.14.3
+Using rb-fsevent 0.10.3
+Using ffi 1.9.25
+Using rb-inotify 0.9.10
+Using sass-listen 4.0.0
+Using sass 3.6.0
+Using bootstrap 4.1.3
+Using bundler 1.16.2
+Using byebug 10.0.2
+Using xpath 3.1.0
+Using capybara 3.8.2
+Using childprocess 0.9.0
+Using chromedriver-helper 2.1.0
+Using coffee-script-source 1.12.2
+Using coffee-script 2.4.1
+Using method_source 0.9.0
+Using thor 0.20.0
+Using railties 5.2.1
+Using coffee-rails 4.2.2
+Using orm_adapter 0.5.0
+Using responders 2.4.0
+Using warden 1.2.7
+Using devise 4.5.0
+Using multi_json 1.13.1
+Using jbuilder 2.7.0
+Using jquery-rails 4.3.3
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Using pg 1.1.3
+Using puma 3.12.0
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.1
+Using rubyzip 1.2.2
+Using tilt 2.0.8
+Using sass-rails 5.0.7
+Using selenium-webdriver 3.14.0
+Using spring 2.0.2
+Using spring-watcher-listen 2.0.1
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.0
+Using uglifier 4.1.19
+Using web-console 3.7.0
+Bundle complete! 22 Gemfile dependencies, 88 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+Zen-MacBook-Pro:MoneyTracker datawow$ rails db:migrate:reset
+Dropped database 'MoneyTracker_development'
+Dropped database 'MoneyTracker_test'
+Created database 'MoneyTracker_development'
+Created database 'MoneyTracker_test'
+== 20180928093344 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0511s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0036s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0026s
+== 20180928093344 DeviseCreateUsers: migrated (0.0575s) =======================
+
+== 20181001023220 CreateAccounts: migrating ===================================
+-- create_table(:accounts)
+   -> 0.0141s
+== 20181001023220 CreateAccounts: migrated (0.0142s) ==========================
+
+== 20181001023232 CreateExpenses: migrating ===================================
+-- create_table(:expenses)
+   -> 0.0142s
+== 20181001023232 CreateExpenses: migrated (0.0143s) ==========================
+
+== 20181001023238 CreateSystemTypes: migrating ================================
+-- create_table(:system_types)
+   -> 0.0061s
+== 20181001023238 CreateSystemTypes: migrated (0.0062s) =======================
+
+== 20181001023255 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0094s
+== 20181001023255 CreateCategories: migrated (0.0098s) ========================
+
+== 20181001023303 CreateStatements: migrating =================================
+-- create_table(:statements)
+   -> 0.0141s
+== 20181001023303 CreateStatements: migrated (0.0142s) ========================
+
+== 20181001023306 CreateBanks: migrating ======================================
+-- create_table(:banks)
+   -> 0.0059s
+== 20181001023306 CreateBanks: migrated (0.0060s) =============================
+
+== 20181001023309 CreateBudgets: migrating ====================================
+-- create_table(:budgets)
+   -> 0.0076s
+== 20181001023309 CreateBudgets: migrated (0.0078s) ===========================
+
+== 20181001023313 CreateBudgetAccounts: migrating =============================
+-- create_table(:budget_accounts)
+   -> 0.0131s
+== 20181001023313 CreateBudgetAccounts: migrated (0.0133s) ====================
+
+Zen-MacBook-Pro:MoneyTracker datawow$ git merge master regis-account
+Updating 543eace..c016e6c
+Fast-forward
+ .rubocop.yml                                                 | 275 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ app/views/devise/confirmations/new.html.erb                  |  16 -------
+ app/views/devise/mailer/confirmation_instructions.html.erb   |   5 ---
+ app/views/devise/mailer/email_changed.html.erb               |   7 ---
+ app/views/devise/mailer/password_change.html.erb             |   3 --
+ app/views/devise/mailer/reset_password_instructions.html.erb |   8 ----
+ app/views/devise/mailer/unlock_instructions.html.erb         |   7 ---
+ app/views/devise/shared/_links.html.erb                      |  19 --------
+ app/views/devise/unlocks/new.html.erb                        |  16 -------
+ 9 files changed, 275 insertions(+), 81 deletions(-)
+ create mode 100644 .rubocop.yml
+ delete mode 100644 app/views/devise/confirmations/new.html.erb
+ delete mode 100644 app/views/devise/mailer/confirmation_instructions.html.erb
+ delete mode 100644 app/views/devise/mailer/email_changed.html.erb
+ delete mode 100644 app/views/devise/mailer/password_change.html.erb
+ delete mode 100644 app/views/devise/mailer/reset_password_instructions.html.erb
+ delete mode 100644 app/views/devise/mailer/unlock_instructions.html.erb
+ delete mode 100644 app/views/devise/shared/_links.html.erb
+ delete mode 100644 app/views/devise/unlocks/new.html.erb
+Zen-MacBook-Pro:MoneyTracker datawow$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> regis-account
+
+Zen-MacBook-Pro:MoneyTracker datawow$ git checkout master
+M	db/schema.rb
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin -u regis-account user-auth
+error: src refspec user-auth does not match any.
+error: failed to push some refs to 'https://github.com/zenology/MoneyTracker.git'
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin -u :regis-account user-auth
+error: src refspec user-auth does not match any.
+error: failed to push some refs to 'https://github.com/zenology/MoneyTracker.git'
+Zen-MacBook-Pro:MoneyTracker datawow$ git branch -m regis-account user-auth
+Zen-MacBook-Pro:MoneyTracker datawow$ git branch
+* master
+  user-auth
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin --delete regis-account
+To https://github.com/zenology/MoneyTracker.git
+ - [deleted]         regis-account
+Zen-MacBook-Pro:MoneyTracker datawow$ git checkout user-auth
+M	db/schema.rb
+Switched to branch 'user-auth'
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin user-auth
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.78 KiB | 2.78 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'user-auth' on GitHub by visiting:
+remote:      https://github.com/zenology/MoneyTracker/pull/new/user-auth
+remote: 
+To https://github.com/zenology/MoneyTracker.git
+ * [new branch]      user-auth -> user-auth
+Zen-MacBook-Pro:MoneyTracker datawow$ gem install htmlbeautifier
+
+Fetching: htmlbeautifier-1.3.1.gem (100%)
+Successfully installed htmlbeautifier-1.3.1
+Parsing documentation for htmlbeautifier-1.3.1
+Installing ri documentation for htmlbeautifier-1.3.1
+Done installing documentation for htmlbeautifier after 0 seconds
+1 gem installed
+Zen-MacBook-Pro:MoneyTracker datawow$ 
+Zen-MacBook-Pro:MoneyTracker datawow$ rake routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /user/sign_in(.:format)                                                                  devise/sessions#new
+             user_session POST   /user/sign_in(.:format)                                                                  devise/sessions#create
+     destroy_user_session DELETE /user/sign_out(.:format)                                                                 devise/sessions#destroy
+        new_user_password GET    /user/password/new(.:format)                                                             devise/passwords#new
+       edit_user_password GET    /user/password/edit(.:format)                                                            devise/passwords#edit
+            user_password PATCH  /user/password(.:format)                                                                 devise/passwords#update
+                          PUT    /user/password(.:format)                                                                 devise/passwords#update
+                          POST   /user/password(.:format)                                                                 devise/passwords#create
+ cancel_user_registration GET    /user/cancel(.:format)                                                                   devise/registrations#cancel
+    new_user_registration GET    /user/sign_up(.:format)                                                                  devise/registrations#new
+   edit_user_registration GET    /user/edit(.:format)                                                                     devise/registrations#edit
+        user_registration PATCH  /user(.:format)                                                                          devise/registrations#update
+                          PUT    /user(.:format)                                                                          devise/registrations#update
+                          DELETE /user(.:format)                                                                          devise/registrations#destroy
+                          POST   /user(.:format)                                                                          devise/registrations#create
+       authenticated_root GET    /                                                                                        dashboard#index
+     unauthenticated_root GET    /                                                                                        devise/sessions#new
+          dashboard_index GET    /dashboard(.:format)                                                                     dashboard#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+Zen-MacBook-Pro:MoneyTracker datawow$ gem 'font-awesome-sass', '~> 5.3.1'
+ERROR:  While executing gem ... (Gem::CommandLineError)
+    Unknown command font-awesome-sass,
+Zen-MacBook-Pro:MoneyTracker datawow$ bundle
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/.........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.3.1
+Using concurrent-ruby 1.0.5
+Using i18n 1.1.0
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.1
+Using builder 3.2.3
+Using erubi 1.7.1
+Using mini_portile2 2.3.0
+Using nokogiri 1.8.4
+Using rails-dom-testing 2.0.3
+Using crass 1.0.4
+Using loofah 2.2.2
+Using rails-html-sanitizer 1.0.4
+Using actionview 5.2.1
+Using rack 2.0.5
+Using rack-test 1.1.0
+Using actionpack 5.2.1
+Using nio4r 2.3.1
+Using websocket-extensions 0.1.3
+Using websocket-driver 0.7.0
+Using actioncable 5.2.1
+Using globalid 0.4.1
+Using activejob 5.2.1
+Using mini_mime 1.0.1
+Using mail 2.7.0
+Using actionmailer 5.2.1
+Using activemodel 5.2.1
+Using arel 9.0.0
+Using activerecord 5.2.1
+Using mimemagic 0.3.2
+Using marcel 0.3.3
+Using activestorage 5.2.1
+Using public_suffix 3.0.3
+Using addressable 2.5.2
+Using io-like 0.3.0
+Using archive-zip 0.11.0
+Using execjs 2.7.0
+Using autoprefixer-rails 9.1.4
+Using awesome_print 1.8.0
+Using bcrypt 3.1.12
+Using bindex 0.5.0
+Using msgpack 1.2.4
+Using bootsnap 1.3.2
+Using popper_js 1.14.3
+Using rb-fsevent 0.10.3
+Using ffi 1.9.25
+Using rb-inotify 0.9.10
+Using sass-listen 4.0.0
+Using sass 3.6.0
+Using bootstrap 4.1.3
+Using bundler 1.16.2
+Using byebug 10.0.2
+Using xpath 3.1.0
+Using capybara 3.8.2
+Using childprocess 0.9.0
+Using chromedriver-helper 2.1.0
+Using coffee-script-source 1.12.2
+Using coffee-script 2.4.1
+Using method_source 0.9.0
+Using thor 0.20.0
+Using railties 5.2.1
+Using coffee-rails 4.2.2
+Using orm_adapter 0.5.0
+Using responders 2.4.0
+Using warden 1.2.7
+Using devise 4.5.0
+Fetching sassc 2.0.0
+
+
+Your user account isn't allowed to install to the system RubyGems.
+  You can cancel this installation and run:
+
+      bundle install --path vendor/bundle
+
+  to install the gems into ./vendor/bundle/, or you can enter your password
+  and install the bundled gems to RubyGems using sudo.
+
+  Password: 
+
+
+Your user account isn't allowed to install to the system RubyGems.
+  You can cancel this installation and run:
+
+      bundle install --path vendor/bundle
+
+  to install the gems into ./vendor/bundle/, or you can enter your password
+  and install the bundled gems to RubyGems using sudo.
+
+  Password: 
+Installing sassc 2.0.0 with native extensions
+Fetching font-awesome-sass 5.3.1
+Installing font-awesome-sass 5.3.1
+Using multi_json 1.13.1
+Using jbuilder 2.7.0
+Using jquery-rails 4.3.3
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Using pg 1.1.3
+Using puma 3.12.0
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.1
+Using rubyzip 1.2.2
+Using tilt 2.0.8
+Using sass-rails 5.0.7
+Using selenium-webdriver 3.14.0
+Using spring 2.0.2
+Using spring-watcher-listen 2.0.1
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.0
+Using uglifier 4.1.19
+Using web-console 3.7.0
+Bundle complete! 23 Gemfile dependencies, 90 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+Zen-MacBook-Pro:MoneyTracker datawow$ git merge master user-auth
+Updating c016e6c..5ff97db
+Fast-forward
+ Gemfile                                 | 86 ++++++++++++++++++++++++++------------------------------------------------------------
+ Gemfile.lock                            |  6 ++++++
+ app/assets/stylesheets/application.scss |  4 +++-
+ 3 files changed, 35 insertions(+), 61 deletions(-)
+Zen-MacBook-Pro:MoneyTracker datawow$ git push origin user-auth
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/zenology/MoneyTracker.git
+   c016e6c..5ff97db  user-auth -> user-auth
+Zen-MacBook-Pro:MoneyTracker datawow$ 
+  [Restored 2 Oct BE 2561 09:31:49]
+Last login: Tue Oct  2 09:31:43 on console
+Restored session: Mon Oct  1 18:10:49 +07 2018
+Zen-MacBook-Pro:MoneyTracker datawow$ 
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g devise:controller user
+Running via Spring preloader in process 6018
+Could not find generator 'devise:controller'. Maybe you meant 'devise:controllers', 'erb:controller' or 'devise:form_for'
+Run `rails generate --help` for more options.
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g devise:controllers user
+Running via Spring preloader in process 6031
+      create  app/controllers/user/confirmations_controller.rb
+      create  app/controllers/user/passwords_controller.rb
+      create  app/controllers/user/registrations_controller.rb
+      create  app/controllers/user/sessions_controller.rb
+      create  app/controllers/user/unlocks_controller.rb
+      create  app/controllers/user/omniauth_callbacks_controller.rb
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  Ensure you have overridden routes for generated controllers in your routes.rb.
+  For example:
+
+    Rails.application.routes.draw do
+      devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+    end
+
+===============================================================================
+Zen-MacBook-Pro:MoneyTracker datawow$ rails d devise:controllers user
+Running via Spring preloader in process 6036
+      remove  app/controllers/user/confirmations_controller.rb
+      remove  app/controllers/user/passwords_controller.rb
+      remove  app/controllers/user/registrations_controller.rb
+      remove  app/controllers/user/sessions_controller.rb
+      remove  app/controllers/user/unlocks_controller.rb
+      remove  app/controllers/user/omniauth_callbacks_controller.rb
+Zen-MacBook-Pro:MoneyTracker datawow$ rails d devise:controllers user -k session
+Running via Spring preloader in process 6039
+      remove  app/controllers/user/confirmations_controller.rb
+      remove  app/controllers/user/passwords_controller.rb
+      remove  app/controllers/user/registrations_controller.rb
+      remove  app/controllers/user/sessions_controller.rb
+      remove  app/controllers/user/unlocks_controller.rb
+      remove  app/controllers/user/omniauth_callbacks_controller.rb
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g devise:controllers user -v session
+Running via Spring preloader in process 6043
+      create  app/controllers/user/confirmations_controller.rb
+      create  app/controllers/user/passwords_controller.rb
+      create  app/controllers/user/registrations_controller.rb
+      create  app/controllers/user/sessions_controller.rb
+      create  app/controllers/user/unlocks_controller.rb
+      create  app/controllers/user/omniauth_callbacks_controller.rb
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  Ensure you have overridden routes for generated controllers in your routes.rb.
+  For example:
+
+    Rails.application.routes.draw do
+      devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+    end
+
+===============================================================================
+Zen-MacBook-Pro:MoneyTracker datawow$ rails d devise:controllers user -k session
+Running via Spring preloader in process 6046
+      remove  app/controllers/user/confirmations_controller.rb
+      remove  app/controllers/user/passwords_controller.rb
+      remove  app/controllers/user/registrations_controller.rb
+      remove  app/controllers/user/sessions_controller.rb
+      remove  app/controllers/user/unlocks_controller.rb
+      remove  app/controllers/user/omniauth_callbacks_controller.rb
+Zen-MacBook-Pro:MoneyTracker datawow$ rails d devise:controllers user -c=session
+Running via Spring preloader in process 6052
+Could not find "session_controller.rb" in any of your source paths. Your current source paths are: 
+/usr/local/lib/ruby/gems/2.5.0/gems/devise-4.5.0/lib/generators/templates/controllers
+Zen-MacBook-Pro:MoneyTracker datawow$ rails d devise:controllers user -c=sessions
+Running via Spring preloader in process 6055
+      remove  app/controllers/user/sessions_controller.rb
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g devise:controllers user -c=sessions
+Running via Spring preloader in process 6057
+      create  app/controllers/user/sessions_controller.rb
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  Ensure you have overridden routes for generated controllers in your routes.rb.
+  For example:
+
+    Rails.application.routes.draw do
+      devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+    end
+
+===============================================================================
+Zen-MacBook-Pro:MoneyTracker datawow$ 
+Zen-MacBook-Pro:MoneyTracker datawow$ 
+Zen-MacBook-Pro:MoneyTracker datawow$ rails g devise:controllers user -c=sessions
+Running via Spring preloader in process 6135
+      create  app/controllers/user/sessions_controller.rb
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  Ensure you have overridden routes for generated controllers in your routes.rb.
+  For example:
+
+    Rails.application.routes.draw do
+      devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+    end
+
+===============================================================================
+Zen-MacBook-Pro:MoneyTracker datawow$ rake route
+^Crake aborted!
+Interrupt: 
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/compile_cache/iseq.rb:26:in `storage_to_output'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/compile_cache/iseq.rb:37:in `fetch'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/compile_cache/iseq.rb:37:in `load_iseq'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/thor-0.20.0/lib/thor/actions.rb:7:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/base.rb:18:in `<class:Base>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/base.rb:17:in `<module:Generators>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/base.rb:13:in `<module:Rails>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/base.rb:12:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/app_base.rb:14:in `<module:Generators>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/app_base.rb:13:in `<module:Rails>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/app_base.rb:12:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/generators/rails/app/app_generator.rb:3:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/app_updater.rb:4:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks/framework.rake:41:in `block (2 levels) in <main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks/framework.rake:40:in `block in <main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks/framework.rake:3:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:62:in `load'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:62:in `rescue in load'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:48:in `load'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:281:in `block in load'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:281:in `load'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks.rb:21:in `block in <main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks.rb:20:in `each'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks.rb:20:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/application.rb:516:in `run_tasks_blocks'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/engine.rb:459:in `load_tasks'
+/Users/datawow/Documents/Work/MoneyTracker/Rakefile:6:in `<top (required)>'
+/usr/local/lib/ruby/gems/2.5.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+
+Caused by:
+Bootsnap::LoadPathCache::FallbackScan: Bootsnap::LoadPathCache::FallbackScan
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/cache.rb:81:in `block in find'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/cache.rb:50:in `synchronize'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/cache.rb:50:in `find'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:49:in `load'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:281:in `block in load'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:281:in `load'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks.rb:21:in `block in <main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks.rb:20:in `each'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/tasks.rb:20:in `<main>'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/usr/local/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `block in require'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:253:in `load_dependency'
+/usr/local/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:287:in `require'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/application.rb:516:in `run_tasks_blocks'
+/usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/engine.rb:459:in `load_tasks'
+/Users/datawow/Documents/Work/MoneyTracker/Rakefile:6:in `<top (required)>'
+/usr/local/lib/ruby/gems/2.5.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+(See full trace by running task with --trace)
+Zen-MacBook-Pro:MoneyTracker datawow$ rake routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /user/sign_in(.:format)                                                                  users/sessions#new
+             user_session POST   /user/sign_in(.:format)                                                                  users/sessions#create
+     destroy_user_session DELETE /user/sign_out(.:format)                                                                 users/sessions#destroy
+        new_user_password GET    /user/password/new(.:format)                                                             devise/passwords#new
+       edit_user_password GET    /user/password/edit(.:format)                                                            devise/passwords#edit
+            user_password PATCH  /user/password(.:format)                                                                 devise/passwords#update
+                          PUT    /user/password(.:format)                                                                 devise/passwords#update
+                          POST   /user/password(.:format)                                                                 devise/passwords#create
+ cancel_user_registration GET    /user/cancel(.:format)                                                                   devise/registrations#cancel
+    new_user_registration GET    /user/sign_up(.:format)                                                                  devise/registrations#new
+   edit_user_registration GET    /user/edit(.:format)                                                                     devise/registrations#edit
+        user_registration PATCH  /user(.:format)                                                                          devise/registrations#update
+                          PUT    /user(.:format)                                                                          devise/registrations#update
+                          DELETE /user(.:format)                                                                          devise/registrations#destroy
+                          POST   /user(.:format)                                                                          devise/registrations#create
+       authenticated_root GET    /                                                                                        dashboard#index
+     unauthenticated_root GET    /                                                                                        devise/sessions#new
+          dashboard_index GET    /dashboard(.:format)                                                                     dashboard#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+Zen-MacBook-Pro:MoneyTracker datawow$ rake routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /user/sign_in(.:format)                                                                  users/sessions#new
+             user_session POST   /user/sign_in(.:format)                                                                  users/sessions#create
+     destroy_user_session DELETE /user/sign_out(.:format)                                                                 users/sessions#destroy
+        new_user_password GET    /user/password/new(.:format)                                                             devise/passwords#new
+       edit_user_password GET    /user/password/edit(.:format)                                                            devise/passwords#edit
+            user_password PATCH  /user/password(.:format)                                                                 devise/passwords#update
+                          PUT    /user/password(.:format)                                                                 devise/passwords#update
+                          POST   /user/password(.:format)                                                                 devise/passwords#create
+ cancel_user_registration GET    /user/cancel(.:format)                                                                   devise/registrations#cancel
+    new_user_registration GET    /user/sign_up(.:format)                                                                  devise/registrations#new
+   edit_user_registration GET    /user/edit(.:format)                                                                     devise/registrations#edit
+        user_registration PATCH  /user(.:format)                                                                          devise/registrations#update
+                          PUT    /user(.:format)                                                                          devise/registrations#update
+                          DELETE /user(.:format)                                                                          devise/registrations#destroy
+                          POST   /user(.:format)                                                                          devise/registrations#create
+       authenticated_root GET    /                                                                                        dashboard#index
+     unauthenticated_root GET    /                                                                                        users/sessions#new
+          dashboard_index GET    /dashboard(.:format)                                                                     dashboard#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+Zen-MacBook-Pro:MoneyTracker datawow$ 
+Zen-MacBook-Pro:MoneyTracker datawow$ rake routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /user/sign_in(.:format)                                                                  users/sessions#new
+             user_session POST   /user/sign_in(.:format)                                                                  users/sessions#create
+     destroy_user_session DELETE /user/sign_out(.:format)                                                                 users/sessions#destroy
+        new_user_password GET    /user/password/new(.:format)                                                             devise/passwords#new
+       edit_user_password GET    /user/password/edit(.:format)                                                            devise/passwords#edit
+            user_password PATCH  /user/password(.:format)                                                                 devise/passwords#update
+                          PUT    /user/password(.:format)                                                                 devise/passwords#update
+                          POST   /user/password(.:format)                                                                 devise/passwords#create
+ cancel_user_registration GET    /user/cancel(.:format)                                                                   devise/registrations#cancel
+    new_user_registration GET    /user/sign_up(.:format)                                                                  devise/registrations#new
+   edit_user_registration GET    /user/edit(.:format)                                                                     devise/registrations#edit
+        user_registration PATCH  /user(.:format)                                                                          devise/registrations#update
+                          PUT    /user(.:format)                                                                          devise/registrations#update
+                          DELETE /user(.:format)                                                                          devise/registrations#destroy
+                          POST   /user(.:format)                                                                          devise/registrations#create
+       authenticated_root GET    /                                                                                        dashboard#index
+     unauthenticated_root GET    /                                                                                        users/sessions#new
+          dashboard_index GET    /dashboard(.:format)                                                                     dashboard#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+Zen-MacBook-Pro:MoneyTracker datawow$ rake routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /user/sign_in(.:format)                                                                  users/sessions#new
+             user_session POST   /user/sign_in(.:format)                                                                  users/sessions#create
+     destroy_user_session DELETE /user/sign_out(.:format)                                                                 users/sessions#destroy
+        new_user_password GET    /user/password/new(.:format)                                                             devise/passwords#new
+       edit_user_password GET    /user/password/edit(.:format)                                                            devise/passwords#edit
+            user_password PATCH  /user/password(.:format)                                                                 devise/passwords#update
+                          PUT    /user/password(.:format)                                                                 devise/passwords#update
+                          POST   /user/password(.:format)                                                                 devise/passwords#create
+ cancel_user_registration GET    /user/cancel(.:format)                                                                   devise/registrations#cancel
+    new_user_registration GET    /user/sign_up(.:format)                                                                  devise/registrations#new
+   edit_user_registration GET    /user/edit(.:format)                                                                     devise/registrations#edit
+        user_registration PATCH  /user(.:format)                                                                          devise/registrations#update
+                          PUT    /user(.:format)                                                                          devise/registrations#update
+                          DELETE /user(.:format)                                                                          devise/registrations#destroy
+                          POST   /user(.:format)                                                                          devise/registrations#create
+       authenticated_root GET    /                                                                                        dashboards#index
+     unauthenticated_root GET    /                                                                                        users/sessions#new
+          dashboard_index GET    /dashboard(.:format)                                                                     dashboard#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+Zen-MacBook-Pro:MoneyTracker datawow$ rake routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /user/sign_in(.:format)                                                                  users/sessions#new
+             user_session POST   /user/sign_in(.:format)                                                                  users/sessions#create
+     destroy_user_session DELETE /user/sign_out(.:format)                                                                 users/sessions#destroy
+        new_user_password GET    /user/password/new(.:format)                                                             devise/passwords#new
+       edit_user_password GET    /user/password/edit(.:format)                                                            devise/passwords#edit
+            user_password PATCH  /user/password(.:format)                                                                 devise/passwords#update
+                          PUT    /user/password(.:format)                                                                 devise/passwords#update
+                          POST   /user/password(.:format)                                                                 devise/passwords#create
+ cancel_user_registration GET    /user/cancel(.:format)                                                                   devise/registrations#cancel
+    new_user_registration GET    /user/sign_up(.:format)                                                                  devise/registrations#new
+   edit_user_registration GET    /user/edit(.:format)                                                                     devise/registrations#edit
+        user_registration PATCH  /user(.:format)                                                                          devise/registrations#update
+                          PUT    /user(.:format)                                                                          devise/registrations#update
+                          DELETE /user(.:format)                                                                          devise/registrations#destroy
+                          POST   /user(.:format)                                                                          devise/registrations#create
+       authenticated_root GET    /                                                                                        dashboards#index
+     unauthenticated_root GET    /                                                                                        users/sessions#new
+               dashboards GET    /dashboards(.:format)                                                                    dashboards#index
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+Zen-MacBook-Pro:MoneyTracker datawow$ 
